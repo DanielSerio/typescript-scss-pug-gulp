@@ -11,24 +11,27 @@ const tsProject = ts.createProject('tsconfig.json')
 
 const { src, dest, parallel, series } = gulp
 
-export async function scss() {
-  return await src('src/styles/**/*.scss')
+export  function scss(cb) {
+  src('src/styles/**/*.scss')
     .pipe(sass({
       outputStyle: 'compressed'
     }))
     .pipe(dest('public/css'))
+    cb()
 }
 
-export async function typescript() {
-  return await src('src/scripts/**/*.ts')
+export function typescript(cb) {
+  src('src/scripts/**/*.ts')
     .pipe(tsProject())
     .pipe(dest('public/scripts'))
+    cb()
 }
 
-export async function compilePug() {
-  return await src('src/views/pages/*.pug')
+export function compilePug(cb) {
+  src('src/views/pages/*.pug')
     .pipe(pug())
     .pipe(dest('public'))
+    cb()
 }
 
 export function serve() {
@@ -38,5 +41,7 @@ export function serve() {
       open: true
     }))
 }
+
+export const build = parallel(compilePug, scss, typescript)
 
 export default async () => await gulp.watch('src', series(compilePug, scss, typescript))

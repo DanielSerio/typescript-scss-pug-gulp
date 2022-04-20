@@ -1,0 +1,1 @@
+*,*:before,*:after{box-sizing:border-box}html,body,body>div:first-of-type{height:100vh;width:100vw;overflow:hidden;margin:0;padding:0}body>div:first-of-type{display:grid;place-content:center}.root,.page{position:relative}.root>.page{min-height:100vh;min-width:100vw;height:100%;width:100%;overflow-x:hidden;overflow-y:auto;display:flex;flex-direction:column}

@@ -14,3 +14,25 @@ body > div:first-of-type {
   display: grid;
   place-content: center;
 }
+
+input,
+button {
+  appearance: none;
+  outline: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 2;
+  transition: all 60ms ease;
+  padding: 0 0.805ch;
+}
+
+input {
+  border: 1px solid;
+  background-color: transparent;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}

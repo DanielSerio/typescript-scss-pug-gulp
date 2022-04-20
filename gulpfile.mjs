@@ -44,4 +44,4 @@ export function serve() {
 
 export const build = parallel(compilePug, scss, typescript)
 
-export default async () => await gulp.watch('src', series(compilePug, scss, typescript))
+export default async () => await gulp.watch('src', build)

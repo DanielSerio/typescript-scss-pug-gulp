@@ -1,0 +1,12 @@
+$primary-hue: 240;
+
+$link-color: hsl($primary-hue, 50%, 40%);
+$btn-primary-color: hsl($primary-hue, 50%, 40%);
+$btn-primary-color-active: hsl($primary-hue, 45%, 33%);
+$btn-primary-color-hover: hsl($primary-hue, 55%, 50%);
+
+$background-color: hsl($primary-hue, 6%, 97%);
+$color: hsla($primary-hue, 6%, 10%, 0.85);
+
+$input-border-color: hsla($primary-hue, 6%, 30%, 0.35);
+$input-border-color-hover: hsla($primary-hue, 6%, 20%, 0.45);
